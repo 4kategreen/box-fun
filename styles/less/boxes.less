@@ -1,19 +1,36 @@
 @import 'variables.less';
 @import 'mixins.less';
 
+/*
+  Each row is .content-box
+*/
 .content-box {
   .make-row();
   border: 1px solid black;
 }
+
+/*
+  Each .content-box has a .main-body and .right-rail by default. 
+
+  These are both set up to be to the left and right really shouldn't exist without each
+  other, since it's a 9-3 layout. Both get a clearfix to handle any silliness when they
+  get down to the smallest sizes.
+*/
 .main-body {
   .clearfix();
   .make-md-column(9);
-  background-color: orange;
   color: black;
 }
+/*
+  .right-rail has more going on. 
+
+  To make the right rail work at smaller sizes, I divided the "content" in half. This will require some planning to make sure right rail widgets fit correctly, but this makes the right rail work at all sizes.
+
+  At xs, md, and lg, the rail widgets tile on top of each other. 
+  At sm, they are side-by-side.
+*/
 .right-rail {
   .clearfix();
-  background-color: purple;
   color: white;
 
   @media (min-width: @screen-md) {
@@ -21,25 +38,23 @@
   }
 
   &__box {
-    &--top, &--bottom {
-      .make-sm-column(6);
-      .single;
-      background-color: lighten(purple, 10%);
-    }
-
-    @media (min-width: @screen-md) {
-      &--top {
-        .make-md-column(12);
-        .single;
-      }
-      &--bottom {
-        .make-md-column(12);
-        .single;
-      }
-    }
+    .make-sm-column(6);
+    .make-md-column(12);
+    .single;
+    background-color: purple;
   }
 }
 
+/*
+  Widget Boxes
+
+  Where the content goes.
+
+  2 x 2: big box
+  1 x 2: tall
+  2 x 1: wide
+  1 x.5: small and wide
+*/
 .two-by-two {
   .make-sm-column(8);
   .double;
@@ -71,42 +86,25 @@
 .one-by-half {
   .make-sm-column(4);
   .half;
-  background-color: gray;
+  background-color: orange;
   color: white;
 }
 
+/*
+  Height Helpers
 
-.half {
+  These set the heights for the boxes. It would be neat to set these based on the 
+  screen size, but not yet.
+*/
+.half() {
   height: 75px;
-  border: 1px solid white;
+  border: 1px solid gray;
 }
-.single {
+.single() {
   height: 150px;
-  border: 1px solid white;
+  border: 1px solid gray;
 }
-.double {
+.double() {
   height: 300px;
-  border: 1px solid white;
-}
-
-.row-xs-flex {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-}
-@media (min-width: 768px) {
-  .row-sm-flex {
-    display: flex;
-  }
-}
-@media (min-width: 992px) {
-  .row-md-flex {
-    display: flex;
-  }
-}
-@media (min-width: 1200px) {
-  .row-lg-flex {
-    display: flex;
-  }
+  border: 1px solid gray;
 }

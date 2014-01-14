@@ -1,3 +1,6 @@
+/*
+  Each row is .content-box
+*/
 .content-box {
   margin-left: -15px;
   margin-right: -15px;
@@ -11,12 +14,18 @@
 .content-box:after {
   clear: both;
 }
+/*
+  Each .content-box has a .main-body and .right-rail by default. 
+
+  These are both set up to be to the left and right really shouldn't exist without each
+  other, since it's a 9-3 layout. Both get a clearfix to handle any silliness when they
+  get down to the smallest sizes.
+*/
 .main-body {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: orange;
   color: black;
 }
 .main-body:before,
@@ -33,8 +42,15 @@
     width: 75%;
   }
 }
+/*
+  .right-rail has more going on. 
+
+  To make the right rail work at smaller sizes, I divided the "content" in half. This will require some planning to make sure right rail widgets fit correctly, but this makes the right rail work at all sizes.
+
+  At xs, md, and lg, the rail widgets tile on top of each other. 
+  At sm, they are side-by-side.
+*/
 .right-rail {
-  background-color: purple;
   color: white;
 }
 .right-rail:before,
@@ -59,60 +75,44 @@
     width: 25%;
   }
 }
-.right-rail__box--top,
-.right-rail__box--bottom {
+.right-rail__box {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   height: 150px;
-  border: 1px solid white;
-  background-color: #b300b3;
+  border: 1px solid gray;
+  background-color: purple;
 }
 @media (min-width: 768px) {
-  .right-rail__box--top,
-  .right-rail__box--bottom {
+  .right-rail__box {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  .right-rail__box--top {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 150px;
-    border: 1px solid white;
-  }
-  .right-rail__box--bottom {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 150px;
-    border: 1px solid white;
-  }
-}
-@media (min-width: 992px) and (min-width: 992px) {
-  .right-rail__box--top {
+  .right-rail__box {
     float: left;
     width: 100%;
   }
 }
-@media (min-width: 992px) and (min-width: 992px) {
-  .right-rail__box--bottom {
-    float: left;
-    width: 100%;
-  }
-}
+/*
+  Widget Boxes
+
+  Where the content goes.
+
+  2 x 2: big box
+  1 x 2: tall
+  2 x 1: wide
+  1 x.5: small and wide
+*/
 .two-by-two {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   height: 300px;
-  border: 1px solid white;
+  border: 1px solid gray;
   background-color: yellow;
   color: black;
 }
@@ -128,7 +128,7 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 300px;
-  border: 1px solid white;
+  border: 1px solid gray;
   background-color: red;
   color: white;
 }
@@ -144,7 +144,7 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 150px;
-  border: 1px solid white;
+  border: 1px solid gray;
   background-color: green;
   color: white;
 }
@@ -160,7 +160,7 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 150px;
-  border: 1px solid white;
+  border: 1px solid gray;
   background-color: blue;
   color: white;
 }
@@ -176,8 +176,8 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 75px;
-  border: 1px solid white;
-  background-color: gray;
+  border: 1px solid gray;
+  background-color: orange;
   color: white;
 }
 @media (min-width: 768px) {
@@ -186,36 +186,9 @@
     width: 33.33333333333333%;
   }
 }
-.half {
-  height: 75px;
-  border: 1px solid white;
-}
-.single {
-  height: 150px;
-  border: 1px solid white;
-}
-.double {
-  height: 300px;
-  border: 1px solid white;
-}
-.row-xs-flex {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-}
-@media (min-width: 768px) {
-  .row-sm-flex {
-    display: flex;
-  }
-}
-@media (min-width: 992px) {
-  .row-md-flex {
-    display: flex;
-  }
-}
-@media (min-width: 1200px) {
-  .row-lg-flex {
-    display: flex;
-  }
-}
+/*
+  Height Helpers
+
+  These set the heights for the boxes. It would be neat to set these based on the 
+  screen size, but not yet.
+*/
