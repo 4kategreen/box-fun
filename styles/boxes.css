@@ -81,7 +81,8 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 150px;
+  height: 165px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .right-rail__box {
@@ -122,7 +123,7 @@
   }
 }
 .two-by-two > div {
-  height: 300px;
+  height: 360px;
 }
 .one-by-two {
   position: relative;
@@ -138,7 +139,7 @@
   }
 }
 .one-by-two > div {
-  height: 300px;
+  height: 360px;
 }
 .two-by-one {
   position: relative;
@@ -154,7 +155,7 @@
   }
 }
 .two-by-one > div {
-  height: 150px;
+  height: 165px;
 }
 .one-by-one {
   position: relative;
@@ -170,14 +171,13 @@
   }
 }
 .one-by-one > div {
-  height: 150px;
+  height: 165px;
 }
 .one-by-half {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 75px;
   color: black;
 }
 @media (min-width: 768px) {
@@ -195,3 +195,9 @@
   These set the heights for the boxes. It would be neat to set these based on the 
   screen size, but not yet.
 */
+.top {
+  margin-bottom: 15px;
+}
+.bottom {
+  margin-top: 15px;
+}

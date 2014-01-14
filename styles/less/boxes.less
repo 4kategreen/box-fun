@@ -42,6 +42,7 @@
     .make-sm-column(6);
     .make-md-column(12);
     .single;
+    .top;
   }
 }
 
@@ -92,7 +93,6 @@
 
 .one-by-half {
   .make-sm-column(4);
-  .half;
   color: black;
   &>div {
     .half;
@@ -109,8 +109,15 @@
   height: 75px;
 }
 .single() {
-  height: 150px;
+  height: 165px;
 }
 .double() {
-  height: 300px;
+  height: 360px;
+}
+
+.top {
+  margin-bottom: (@grid-gutter-width / 2);
+}
+.bottom {
+  margin-top: (@grid-gutter-width / 2);
 }
