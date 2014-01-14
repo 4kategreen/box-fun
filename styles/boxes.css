@@ -18,7 +18,14 @@
   padding-right: 15px;
   background-color: orange;
   color: black;
-  height: 400px;
+}
+.main-body:before,
+.main-body:after {
+  content: " ";
+  display: table;
+}
+.main-body:after {
+  clear: both;
 }
 @media (min-width: 992px) {
   .main-body {
@@ -27,18 +34,76 @@
   }
 }
 .right-rail {
+  background-color: purple;
+  color: white;
+}
+.right-rail:before,
+.right-rail:after {
+  content: " ";
+  display: table;
+}
+.right-rail:after {
+  clear: both;
+}
+@media (min-width: 992px) {
+  .right-rail {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .right-rail {
+    float: left;
+    width: 25%;
+  }
+}
+.right-rail__box--top,
+.right-rail__box--bottom {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: purple;
-  color: white;
-  height: 400px;
+  height: 150px;
+  border: 1px solid white;
+  background-color: #b300b3;
+}
+@media (min-width: 768px) {
+  .right-rail__box--top,
+  .right-rail__box--bottom {
+    float: left;
+    width: 50%;
+  }
 }
 @media (min-width: 992px) {
-  .right-rail {
+  .right-rail__box--top {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 150px;
+    border: 1px solid white;
+  }
+  .right-rail__box--bottom {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 150px;
+    border: 1px solid white;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .right-rail__box--top {
     float: left;
-    width: 25%;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .right-rail__box--bottom {
+    float: left;
+    width: 100%;
   }
 }
 .two-by-two {
@@ -46,10 +111,12 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 400px;
+  height: 300px;
+  border: 1px solid white;
   background-color: yellow;
+  color: black;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .two-by-two {
     float: left;
     width: 66.66666666666666%;
@@ -60,10 +127,12 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 400px;
+  height: 300px;
+  border: 1px solid white;
   background-color: red;
+  color: white;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .one-by-two {
     float: left;
     width: 33.33333333333333%;
@@ -74,10 +143,12 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 200px;
+  height: 150px;
+  border: 1px solid white;
   background-color: green;
+  color: white;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .two-by-one {
     float: left;
     width: 66.66666666666666%;
@@ -88,10 +159,12 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 200px;
+  height: 150px;
+  border: 1px solid white;
   background-color: blue;
+  color: white;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .one-by-one {
     float: left;
     width: 33.33333333333333%;
@@ -102,73 +175,28 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 100px;
+  height: 75px;
+  border: 1px solid white;
   background-color: gray;
+  color: white;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .one-by-half {
     float: left;
     width: 33.33333333333333%;
   }
 }
-.col-xs-1,
-.col-sm-1,
-.col-md-1,
-.col-lg-1,
-.col-xs-2,
-.col-sm-2,
-.col-md-2,
-.col-lg-2,
-.col-xs-3,
-.col-sm-3,
-.col-md-3,
-.col-lg-3,
-.col-xs-4,
-.col-sm-4,
-.col-md-4,
-.col-lg-4,
-.col-xs-5,
-.col-sm-5,
-.col-md-5,
-.col-lg-5,
-.col-xs-6,
-.col-sm-6,
-.col-md-6,
-.col-lg-6,
-.col-xs-7,
-.col-sm-7,
-.col-md-7,
-.col-lg-7,
-.col-xs-8,
-.col-sm-8,
-.col-md-8,
-.col-lg-8,
-.col-xs-9,
-.col-sm-9,
-.col-md-9,
-.col-lg-9,
-.col-xs-10,
-.col-sm-10,
-.col-md-10,
-.col-lg-10,
-.col-xs-11,
-.col-sm-11,
-.col-md-11,
-.col-lg-11,
-.col-xs-12,
-.col-sm-12,
-.col-md-12,
-.col-lg-12 {
+.half {
+  height: 75px;
   border: 1px solid white;
 }
-.one {
-  height: 100px;
+.single {
+  height: 150px;
+  border: 1px solid white;
 }
-.two {
-  height: 200px;
-}
-.four {
-  height: 400px;
+.double {
+  height: 300px;
+  border: 1px solid white;
 }
 .row-xs-flex {
   display: flex;
