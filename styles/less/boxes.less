@@ -6,7 +6,7 @@
 */
 .content-box {
   .make-row();
-  border: 1px solid black;
+  margin: (@grid-gutter-width / 2) 0;
 }
 
 /*
@@ -31,7 +31,8 @@
 */
 .right-rail {
   .clearfix();
-  color: white;
+  border: 1px solid #000;
+  color: black;
 
   @media (min-width: @screen-md) {
     .make-md-column(3);
@@ -41,7 +42,6 @@
     .make-sm-column(6);
     .make-md-column(12);
     .single;
-    background-color: purple;
   }
 }
 
@@ -55,39 +55,48 @@
   2 x 1: wide
   1 x.5: small and wide
 */
+.widget>div {
+  border: 1px solid #000;
+}
 .two-by-two {
   .make-sm-column(8);
-  .double;
-  background-color: yellow;
   color: black;
+  &>div {
+    .double;
+  }
 }
 
 .one-by-two {
   .make-sm-column(4);
-  .double;
-  background-color: red;
-  color: white;
+  color: black;
+  &>div {
+    .double;
+  }
 }
 
 .two-by-one {
   .make-sm-column(8);
-  .single;
-  background-color: green;
-  color: white;
+  color: black;
+  &>div {
+    .single;
+  }
 }
 
 .one-by-one {
   .make-sm-column(4);
-  .single;
-  background-color: blue;
-  color: white;
+  color: black;
+  &>div {
+    .single;
+  }
 }
 
 .one-by-half {
   .make-sm-column(4);
   .half;
-  background-color: orange;
-  color: white;
+  color: black;
+  &>div {
+    .half;
+  }
 }
 
 /*
@@ -98,13 +107,10 @@
 */
 .half() {
   height: 75px;
-  border: 1px solid gray;
 }
 .single() {
   height: 150px;
-  border: 1px solid gray;
 }
 .double() {
   height: 300px;
-  border: 1px solid gray;
 }
