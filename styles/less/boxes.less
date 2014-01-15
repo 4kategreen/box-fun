@@ -5,7 +5,8 @@
   Each row is .content-box
 */
 .content-box {
-  .make-row();
+  .make-row(0);
+  border: 1px solid #ddd;
   margin: (@grid-gutter-width / 2) 0;
 }
 
@@ -18,8 +19,9 @@
 */
 .main-body {
   .clearfix();
-  .make-md-column(9);
+  .make-md-column(9,0);
   color: black;
+  height: 360px;
 }
 /*
   .right-rail has more going on. 
@@ -31,18 +33,23 @@
 */
 .right-rail {
   .clearfix();
-  border: 1px solid #000;
   color: black;
+  height: 180px;
 
   @media (min-width: @screen-md) {
-    .make-md-column(3);
+    .make-md-column(3,0);
+    height: 360px;
   }
 
   &__box {
     .make-sm-column(6);
     .make-md-column(12);
-    .single;
-    .top;
+    border: 1px solid #000;
+    height: 100%;
+
+    @media (min-width: @screen-md) {
+      height: 50%;
+    }
   }
 }
 
@@ -56,47 +63,37 @@
   2 x 1: wide
   1 x.5: small and wide
 */
-.widget>div {
+.widget {
   border: 1px solid #000;
 }
 .two-by-two {
   .make-sm-column(8);
+  .double;
   color: black;
-  &>div {
-    .double;
-  }
 }
 
 .one-by-two {
   .make-sm-column(4);
+  .double;
   color: black;
-  &>div {
-    .double;
-  }
 }
 
 .two-by-one {
   .make-sm-column(8);
+  .single;
   color: black;
-  &>div {
-    .single;
-  }
 }
 
 .one-by-one {
   .make-sm-column(4);
+  .single;
   color: black;
-  &>div {
-    .single;
-  }
 }
 
 .one-by-half {
   .make-sm-column(4);
+  .half;
   color: black;
-  &>div {
-    .half;
-  }
 }
 
 /*
@@ -106,18 +103,13 @@
   screen size, but not yet.
 */
 .half() {
-  height: 75px;
+  height: 22%;
+  margin-bottom: 3%;
 }
 .single() {
-  height: 165px;
+  height: 47%;
+  margin-bottom: 3%;
 }
 .double() {
-  height: 360px;
-}
-
-.top {
-  margin-bottom: (@grid-gutter-width / 2);
-}
-.bottom {
-  margin-top: (@grid-gutter-width / 2);
+  height: 100%;
 }
