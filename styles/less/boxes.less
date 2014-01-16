@@ -21,7 +21,6 @@
   .clearfix();
   .make-md-column(9,0);
   color: black;
-  height: 360px;
 }
 /*
   .right-rail has more going on. 
@@ -34,21 +33,19 @@
 .right-rail {
   .clearfix();
   color: black;
-  height: 180px;
+  .make-sm-box(12,4);
 
   @media (min-width: @screen-md) {
-    .make-md-column(3,0);
-    height: 360px;
+    .make-md-box(3,4);
   }
 
   &__box {
-    .make-sm-column(6);
-    .make-md-column(12);
-    border: 1px solid #000;
-    height: 100%;
+    .make-sm-box(6,4);
+    &:extend(.widget__container);
+    &:extend(.module);
 
     @media (min-width: @screen-md) {
-      height: 50%;
+      .make-md-box(12,4);
     }
   }
 }
@@ -63,53 +60,48 @@
   2 x 1: wide
   1 x.5: small and wide
 */
-.widget {
-  border: 1px solid #000;
+.make-sm-box(@w:4,@h:2) {
+  .make-sm-column(@w);
+  color: black;
+  &>div {
+    height: @h * 50px;
+  }
+}
+.make-md-box(@w:4,@h:2) {
+  .make-md-column(@w);
+  color: black;
+  &>div {
+    height: @h * 50px;
+  }
 }
 .two-by-two {
-  .make-sm-column(8);
-  .double;
-  color: black;
+  .make-sm-box(8,8);
 }
 
 .one-by-two {
-  .make-sm-column(4);
-  .double;
-  color: black;
+  .make-sm-box(4,8);
 }
 
 .two-by-one {
-  .make-sm-column(8);
-  .single;
-  color: black;
+  .make-sm-box(8,4);
 }
 
 .one-by-one {
-  .make-sm-column(4);
-  .single;
-  color: black;
+  .make-sm-box(4,4);
 }
 
 .one-by-half {
-  .make-sm-column(4);
-  .half;
-  color: black;
+  .make-sm-box(4,2);
 }
 
-/*
-  Height Helpers
+.widget__container {
+  border: 1px solid #000;
 
-  These set the heights for the boxes. It would be neat to set these based on the 
-  screen size, but not yet.
-*/
-.half() {
-  height: 22%;
-  margin-bottom: 3%;
+  @media (max-width: @screen-xs-max) {
+    height: auto !important;
+  }
 }
-.single() {
-  height: 47%;
-  margin-bottom: 3%;
-}
-.double() {
-  height: 100%;
+
+.top {
+  background-color: #555;
 }

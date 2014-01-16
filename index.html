@@ -5,12 +5,12 @@
     <link type="text/css" rel="stylesheet" href="styles/boxes.css">
   </head>
 
-  <body>
+  <body ng-app="boxes">
     <div class="container">
       <div class="content-box">
         <div class="main-body">
-          <div class="widget two-by-two">Importantest Feature</div>
-          <div class="widget one-by-two">Important</div>
+          <widget class="two-by-two">Importantest Feature</widget>
+          <widget class="one-by-two">Important</widget>
         </div>
         <div class="right-rail">
           <div class="right-rail__box">Right Rail Top</div>
@@ -20,11 +20,11 @@
 
       <div class="content-box">
         <div class="main-body">
-          <div class="widget one-by-two">Important</div>
-          <div class="widget one-by-one">Stuff 1</div>
-          <div class="widget one-by-one">Stuff 2</div>
-          <div class="widget one-by-one">Stuff 3</div>
-          <div class="widget one-by-one">Stuff 4</div>
+          <widget class="one-by-two">Important</widget>
+          <widget class="one-by-one">Stuff 1</widget>
+          <widget class="one-by-one">Stuff 2</widget>
+          <widget class="one-by-one">Stuff 3</widget>
+          <widget class="one-by-one">Stuff 4</widget>
         </div>
         <div class="right-rail">
           <div class="right-rail__box">Right Rail Top</div>
@@ -34,17 +34,20 @@
 
     <div class="content-box">
       <div class="main-body">
-        <div class="widget two-by-one">Wide Thing</div>
-        <div class="widget one-by-half">Tiny Thing 1</div>
-        <div class="widget one-by-half">Tiny Thing 2</div>
-        <div class="widget one-by-one">Stuff 1</div>
-        <div class="widget one-by-one">Stuff 2</div>
-        <div class="widget one-by-half">Tiny Thing 3</div>
-        <div class="widget one-by-half">Tiny Thing 4</div>
+        <widget class="two-by-one">Wide Thing</widget>
+        <widget class="one-by-half">Tiny Thing 1</widget>
+        <widget class="one-by-half">Tiny Thing 2</widget>
+        <widget class="one-by-one">Stuff 1</widget>
+        <widget class="one-by-one">Stuff 2</widget>
+        <widget class="one-by-half">Tiny Thing 3</widget>
+        <widget class="one-by-half">Tiny Thing 4</widget>
       </div>
       <div class="right-rail">
         <div class="right-rail__box">Right Rail Top</div>
         <div class="right-rail__box">Right Rail Bottom</div>
       </div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="scripts/box.js"></script>
   </body>
 </html>

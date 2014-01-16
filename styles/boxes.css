@@ -28,7 +28,6 @@
   padding-left: 0;
   padding-right: 0;
   color: black;
-  height: 360px;
 }
 .main-body:before,
 .main-body:after {
@@ -53,8 +52,11 @@
   At sm, they are side-by-side.
 */
 .right-rail {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: black;
-  height: 180px;
 }
 .right-rail:before,
 .right-rail:after {
@@ -64,13 +66,25 @@
 .right-rail:after {
   clear: both;
 }
+@media (min-width: 768px) {
+  .right-rail {
+    float: left;
+    width: 100%;
+  }
+}
+.right-rail > div {
+  height: 200px;
+}
 @media (min-width: 992px) {
   .right-rail {
     position: relative;
     min-height: 1px;
-    padding-left: 0;
-    padding-right: 0;
-    height: 360px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+  }
+  .right-rail > div {
+    height: 200px;
   }
 }
 @media (min-width: 992px) and (min-width: 992px) {
@@ -84,8 +98,7 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid #000;
-  height: 100%;
+  color: black;
 }
 @media (min-width: 768px) {
   .right-rail__box {
@@ -93,15 +106,25 @@
     width: 50%;
   }
 }
-@media (min-width: 992px) {
-  .right-rail__box {
-    float: left;
-    width: 100%;
-  }
+.right-rail__box > div {
+  height: 200px;
 }
 @media (min-width: 992px) {
   .right-rail__box {
-    height: 50%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+  }
+  .right-rail__box > div {
+    height: 200px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .right-rail__box {
+    float: left;
+    width: 100%;
   }
 }
 /*
@@ -114,15 +137,11 @@
   2 x 1: wide
   1 x.5: small and wide
 */
-.widget {
-  border: 1px solid #000;
-}
 .two-by-two {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 100%;
   color: black;
 }
 @media (min-width: 768px) {
@@ -131,12 +150,14 @@
     width: 66.66666666666666%;
   }
 }
+.two-by-two > div {
+  height: 400px;
+}
 .one-by-two {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 100%;
   color: black;
 }
 @media (min-width: 768px) {
@@ -145,13 +166,14 @@
     width: 33.33333333333333%;
   }
 }
+.one-by-two > div {
+  height: 400px;
+}
 .two-by-one {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 47%;
-  margin-bottom: 3%;
   color: black;
 }
 @media (min-width: 768px) {
@@ -160,13 +182,14 @@
     width: 66.66666666666666%;
   }
 }
+.two-by-one > div {
+  height: 200px;
+}
 .one-by-one {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 47%;
-  margin-bottom: 3%;
   color: black;
 }
 @media (min-width: 768px) {
@@ -175,13 +198,14 @@
     width: 33.33333333333333%;
   }
 }
+.one-by-one > div {
+  height: 200px;
+}
 .one-by-half {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 22%;
-  margin-bottom: 3%;
   color: black;
 }
 @media (min-width: 768px) {
@@ -190,9 +214,19 @@
     width: 33.33333333333333%;
   }
 }
-/*
-  Height Helpers
-
-  These set the heights for the boxes. It would be neat to set these based on the 
-  screen size, but not yet.
-*/
+.one-by-half > div {
+  height: 100px;
+}
+.widget__container,
+.right-rail__box {
+  border: 1px solid #000;
+}
+@media (max-width: 767px) {
+  .widget__container,
+  .right-rail__box {
+    height: auto !important;
+  }
+}
+.top {
+  background-color: #555;
+}
