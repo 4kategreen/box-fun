@@ -75,6 +75,11 @@
 .right-rail > div {
   height: 200px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .right-rail {
+    margin-top: 15px;
+  }
+}
 @media (min-width: 992px) {
   .right-rail {
     position: relative;
@@ -227,6 +232,7 @@
     height: auto !important;
   }
 }
-.top {
-  background-color: #555;
+.top > .widget__container {
+  height: 185px;
+  margin-bottom: 15px;
 }

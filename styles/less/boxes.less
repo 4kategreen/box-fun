@@ -35,6 +35,10 @@
   color: black;
   .make-sm-box(12,4);
 
+  @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+    margin-top: (@grid-gutter-width / 2);
+  }
+
   @media (min-width: @screen-md) {
     .make-md-box(3,4);
   }
@@ -102,6 +106,7 @@
   }
 }
 
-.top {
-  background-color: #555;
+.top>.widget__container {
+  height: 185px;
+  margin-bottom: 15px;
 }
