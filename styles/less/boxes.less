@@ -1,12 +1,18 @@
 @import 'variables.less';
 @import 'mixins.less';
 
+
+body {
+  background-color: @gray-lighter;
+}
+.container {
+  background-color: #fff;
+}
 /*
   Each row is .content-box
 */
 .content-box {
   .make-row(0);
-  border: 1px solid #ddd;
   margin: (@grid-gutter-width / 2) 0;
 }
 
@@ -34,6 +40,7 @@
   .clearfix();
   color: black;
   .make-sm-box(12,4);
+  &:extend(.widget__container);
 
   @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
     margin-top: (@grid-gutter-width / 2);
@@ -45,8 +52,6 @@
 
   &__box {
     .make-sm-box(6,4);
-    &:extend(.widget__container);
-    &:extend(.module);
 
     @media (min-width: @screen-md) {
       .make-md-box(12,4);
@@ -99,7 +104,7 @@
 }
 
 .widget__container {
-  border: 1px solid #000;
+  .box-shadow(0 0 10px #000);
 
   @media (max-width: @screen-xs-max) {
     height: auto !important;

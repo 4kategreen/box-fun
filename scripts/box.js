@@ -11,7 +11,6 @@ boxes.directive('widget', function() {
     if (top === 200 && height === 100) {
       e.addClass('top');
     }
-    //console.log(e.parent.innerHeight());
   }
   return {
     restrict: 'E',

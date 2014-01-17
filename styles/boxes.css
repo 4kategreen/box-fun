@@ -1,10 +1,15 @@
+body {
+  background-color: #eeeeee;
+}
+.container {
+  background-color: #fff;
+}
 /*
   Each row is .content-box
 */
 .content-box {
   margin-left: 0;
   margin-right: 0;
-  border: 1px solid #ddd;
   margin: 15px 0;
 }
 .content-box:before,
@@ -223,12 +228,13 @@
   height: 100px;
 }
 .widget__container,
-.right-rail__box {
-  border: 1px solid #000;
+.right-rail {
+  -webkit-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
 }
 @media (max-width: 767px) {
   .widget__container,
-  .right-rail__box {
+  .right-rail {
     height: auto !important;
   }
 }
