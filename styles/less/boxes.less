@@ -1,6 +1,8 @@
 @import 'variables.less';
 @import 'mixins.less';
 
+@grid-gutter-width: 15px;
+
 
 body {
   background-color: @gray-lighter;
@@ -13,7 +15,7 @@ body {
 */
 .content-box {
   .make-row(0);
-  margin: (@grid-gutter-width / 2) 0;
+  margin: @grid-gutter-width 0;
 }
 
 /*
@@ -37,13 +39,14 @@ body {
   At sm, they are side-by-side.
 */
 .right-rail {
+  .make-sm-box(12,4);
   .clearfix();
   color: black;
-  .make-sm-box(12,4);
+
   &:extend(.widget__container);
 
   @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
-    margin-top: (@grid-gutter-width / 2);
+    margin-top: @grid-gutter-width;
   }
 
   @media (min-width: @screen-md) {
@@ -104,7 +107,7 @@ body {
 }
 
 .widget__container {
-  .box-shadow(0 0 10px #000);
+  .box-shadow(0 0 4px 2px @gray);
 
   @media (max-width: @screen-xs-max) {
     height: auto !important;
@@ -113,5 +116,5 @@ body {
 
 .top>.widget__container {
   height: 185px;
-  margin-bottom: 15px;
+  margin-bottom: @grid-gutter-width;
 }

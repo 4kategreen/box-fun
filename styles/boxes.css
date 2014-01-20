@@ -59,17 +59,9 @@ body {
 .right-rail {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   color: black;
-}
-.right-rail:before,
-.right-rail:after {
-  content: " ";
-  display: table;
-}
-.right-rail:after {
-  clear: both;
 }
 @media (min-width: 768px) {
   .right-rail {
@@ -80,6 +72,14 @@ body {
 .right-rail > div {
   height: 200px;
 }
+.right-rail:before,
+.right-rail:after {
+  content: " ";
+  display: table;
+}
+.right-rail:after {
+  clear: both;
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .right-rail {
     margin-top: 15px;
@@ -89,8 +89,8 @@ body {
   .right-rail {
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
     color: black;
   }
   .right-rail > div {
@@ -106,8 +106,8 @@ body {
 .right-rail__box {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   color: black;
 }
 @media (min-width: 768px) {
@@ -123,8 +123,8 @@ body {
   .right-rail__box {
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
     color: black;
   }
   .right-rail__box > div {
@@ -150,8 +150,8 @@ body {
 .two-by-two {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   color: black;
 }
 @media (min-width: 768px) {
@@ -166,8 +166,8 @@ body {
 .one-by-two {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   color: black;
 }
 @media (min-width: 768px) {
@@ -182,8 +182,8 @@ body {
 .two-by-one {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   color: black;
 }
 @media (min-width: 768px) {
@@ -198,8 +198,8 @@ body {
 .one-by-one {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   color: black;
 }
 @media (min-width: 768px) {
@@ -214,8 +214,8 @@ body {
 .one-by-half {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   color: black;
 }
 @media (min-width: 768px) {
@@ -229,8 +229,8 @@ body {
 }
 .widget__container,
 .right-rail {
-  -webkit-box-shadow: 0 0 10px #000000;
-  box-shadow: 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 4px 2px #555555;
+  box-shadow: 0 0 4px 2px #555555;
 }
 @media (max-width: 767px) {
   .widget__container,
