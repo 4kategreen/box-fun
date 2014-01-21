@@ -231,6 +231,7 @@ body {
 .right-rail {
   -webkit-box-shadow: 0 0 4px 2px #555555;
   box-shadow: 0 0 4px 2px #555555;
+  padding: 5px 10px;
 }
 @media (max-width: 767px) {
   .widget__container,
