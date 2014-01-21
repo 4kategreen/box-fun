@@ -7,11 +7,11 @@
   </head>
 
   <body ng-app="boxes">
-    <div class="container">
+    <div class="container" ng-controller="widgetCtrl">
       <div class="content-box">
         <div class="main-body">
-          <widget class="two-by-two">Importantest Feature</widget>
-          <widget class="one-by-two">Important</widget>
+          <widget widget-id="1" class="two-by-two">Importantest Feature</widget>
+          <widget widget-id="2" class="one-by-two">Important</widget>
         </div>
         <div class="right-rail">
           <div class="right-rail__box">Right Rail Top</div>
@@ -21,30 +21,31 @@
 
       <div class="content-box">
         <div class="main-body">
-          <widget class="one-by-two">Important</widget>
-          <widget class="one-by-one">Stuff 1</widget>
-          <widget class="one-by-one">Stuff 2</widget>
-          <widget class="one-by-one">Stuff 3</widget>
-          <widget class="one-by-one">Stuff 4</widget>
+          <widget widget-id="3" class="one-by-two">Important</widget>
+          <widget widget-id="4" class="one-by-one">Stuff 1</widget>
+          <widget widget-id="5" class="one-by-one">Stuff 2</widget>
+          <widget widget-id="6" class="one-by-one">Stuff 3</widget>
+          <widget widget-id="7" class="one-by-one">Stuff 4</widget>
         </div>
         <div class="right-rail">
-          <div class="right-rail__box">Right Rail Top</div>
-          <div class="right-rail__box">Right Rail Bottom</div>
+          <div widget-id="13" class="right-rail__box">Right Rail Top</div>
+          <div widget-id="14" class="right-rail__box">Right Rail Bottom</div>
         </div>
     </div>
 
     <div class="content-box">
       <div class="main-body">
-        <widget class="two-by-one">Wide Thing</widget>
-        <widget class="one-by-one">Box</widget>
-        <widget class="one-by-one">Stuff 1</widget>
-        <widget class="one-by-one">Stuff 2</widget>
-        <widget class="one-by-one">Box</widget>
+        <widget widget-id="8" class="two-by-one">Wide Thing</widget>
+        <widget widget-id="9" class="one-by-one">Box</widget>
+        <widget widget-id="10" class="one-by-one">Stuff 1</widget>
+        <widget widget-id="11" class="one-by-one">Stuff 2</widget>
+        <widget widget-id="12" class="one-by-one">Box</widget>
       </div>
       <div class="right-rail">
-        <div class="right-rail__box">Right Rail Top</div>
-        <div class="right-rail__box">Right Rail Bottom</div>
+        <div widget-id="15" class="right-rail__box">Right Rail Top</div>
+        <div widget-id="16" class="right-rail__box">Right Rail Bottom</div>
       </div>
+    </div>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="scripts/box.js"></script>
