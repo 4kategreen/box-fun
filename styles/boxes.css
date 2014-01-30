@@ -1,8 +1,9 @@
 body {
   background-color: #eeeeee;
 }
-.container {
+.main-content-box {
   background-color: #fff;
+  margin-top: 70px;
 }
 /*
   Each row is .content-box

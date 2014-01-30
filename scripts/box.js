@@ -14,7 +14,6 @@ boxes.directive('widget', function() {
 
     //console.log(a.widgetId);
     //s.story = s.stories[storyId];
-    console.log(s.widgetId);
     s.story = s.$parent.stories[s.widgetId - 1];
   }
   return {
