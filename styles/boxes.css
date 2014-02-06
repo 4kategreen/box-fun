@@ -1,3 +1,74 @@
+.header__nav {
+  -webkit-box-shadow: 0 5px 10px #555555;
+  box-shadow: 0 5px 10px #555555;
+}
+.header__nameplate {
+  font-family: Heuristica, serif;
+  text-transform: uppercase;
+}
+.header__subscribe {
+  color: #ffffff;
+  background-color: #3e5266;
+  border-color: #3e5266;
+}
+.header__subscribe:hover,
+.header__subscribe:focus,
+.header__subscribe:active,
+.header__subscribe.active,
+.open .dropdown-toggle.header__subscribe {
+  color: #ffffff;
+  background-color: #2f3e4d;
+  border-color: #273340;
+}
+.header__subscribe:active,
+.header__subscribe.active,
+.open .dropdown-toggle.header__subscribe {
+  background-image: none;
+}
+.header__subscribe.disabled,
+.header__subscribe[disabled],
+fieldset[disabled] .header__subscribe,
+.header__subscribe.disabled:hover,
+.header__subscribe[disabled]:hover,
+fieldset[disabled] .header__subscribe:hover,
+.header__subscribe.disabled:focus,
+.header__subscribe[disabled]:focus,
+fieldset[disabled] .header__subscribe:focus,
+.header__subscribe.disabled:active,
+.header__subscribe[disabled]:active,
+fieldset[disabled] .header__subscribe:active,
+.header__subscribe.disabled.active,
+.header__subscribe[disabled].active,
+fieldset[disabled] .header__subscribe.active {
+  background-color: #3e5266;
+  border-color: #3e5266;
+}
+.header__subscribe .badge {
+  color: #3e5266;
+  background-color: #ffffff;
+}
+/*
+  Bootstrap style overrides. Recompiling bootstrap is not happening with these vars so they need
+  to be done manually.
+*/
+@font-face {
+  font-family: "Heuristica";
+  src: url("http://chronicle.com/themes/che/fonts/heuristica-regular-webfont.woff");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: Heuristica, serif;
+}
 body {
   background-color: #eeeeee;
 }
@@ -13,16 +84,8 @@ body {
   margin-right: 0;
   margin: 15px 0;
 }
-.content-box:before,
-.content-box:after {
-  content: " ";
-  display: table;
-}
-.content-box:after {
-  clear: both;
-}
 /*
-  Each .content-box has a .main-body and .right-rail by default. 
+  Each .content-box has a .main-body and .right-rail by default.
 
   These are both set up to be to the left and right really shouldn't exist without each
   other, since it's a 9-3 layout. Both get a clearfix to handle any silliness when they
@@ -50,11 +113,11 @@ body {
   }
 }
 /*
-  .right-rail has more going on. 
+  .right-rail has more going on.
 
   To make the right rail work at smaller sizes, I divided the "content" in half. This will require some planning to make sure right rail widgets fit correctly, but this makes the right rail work at all sizes.
 
-  At xs, md, and lg, the rail widgets tile on top of each other. 
+  At xs, md, and lg, the rail widgets tile on top of each other.
   At sm, they are side-by-side.
 */
 .right-rail {

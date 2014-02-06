@@ -1,12 +1,29 @@
 @import 'variables.less';
 @import 'mixins.less';
+@import 'nav.less';
 
+/*
+  Bootstrap style overrides. Recompiling bootstrap is not happening with these vars so they need
+  to be done manually.
+*/
 @grid-gutter-width: 15px;
+@brand-info: #3e5266;
 
+@font-face {
+  font-family: "Heuristica";
+  src: url("http://chronicle.com/themes/che/fonts/heuristica-regular-webfont.woff");
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family: Heuristica, serif;
+}
 
 body {
   background-color: @gray-lighter;
 }
+
+
 .main-content-box {
   background-color: #fff;
   margin-top: 70px;
@@ -20,7 +37,7 @@ body {
 }
 
 /*
-  Each .content-box has a .main-body and .right-rail by default. 
+  Each .content-box has a .main-body and .right-rail by default.
 
   These are both set up to be to the left and right really shouldn't exist without each
   other, since it's a 9-3 layout. Both get a clearfix to handle any silliness when they
@@ -32,11 +49,11 @@ body {
   color: black;
 }
 /*
-  .right-rail has more going on. 
+  .right-rail has more going on.
 
   To make the right rail work at smaller sizes, I divided the "content" in half. This will require some planning to make sure right rail widgets fit correctly, but this makes the right rail work at all sizes.
 
-  At xs, md, and lg, the rail widgets tile on top of each other. 
+  At xs, md, and lg, the rail widgets tile on top of each other.
   At sm, they are side-by-side.
 */
 .right-rail {
