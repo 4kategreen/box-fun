@@ -80,9 +80,10 @@ body {
   Each row is .content-box
 */
 .content-box {
-  margin-left: 0;
-  margin-right: 0;
-  margin: 15px 0;
+  margin-left: -7.5px;
+  margin-right: -7.5px;
+  display: inline-block;
+  margin: 7.5px 0;
 }
 /*
   Each .content-box has a .main-body and .right-rail by default.
@@ -206,10 +207,11 @@ body {
 
   Where the content goes.
 
-  2 x 2: big box
-  1 x 2: tall
-  2 x 1: wide
-  1 x.5: small and wide
+  8 x 8: big box
+  4 x 8: tall
+  8 x 4: wide
+  4 x 4: regular box
+  4 x 2: small and wide
 */
 .two-by-two {
   position: relative;
@@ -291,15 +293,16 @@ body {
 .one-by-half > div {
   height: 100px;
 }
-.widget__container,
-.right-rail {
-  -webkit-box-shadow: 0 0 4px 2px #555555;
-  box-shadow: 0 0 4px 2px #555555;
+.widget__container {
   padding: 5px 10px;
+}
+.widget__container,
+.right-rail__box {
+  border: 1px solid #000;
 }
 @media (max-width: 767px) {
   .widget__container,
-  .right-rail {
+  .right-rail__box {
     height: auto !important;
   }
 }
