@@ -7,7 +7,7 @@
   </head>
 
   <body ng-app="boxes">
-    <nav class="header__nav navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav class="header__nav navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -25,20 +25,14 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Login</a></li>
         </ul>
-<!--         <form class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form> -->
-      </div><!-- /.navbar-collapse -->
+      </div>
     </nav>
 
     <div class="container main-content-box" ng-controller="widgetCtrl">
       <div class="content-box">
         <div class="main-body">
-          <widget widget-id="1" class="two-by-two">Importantest Feature</widget>
-          <widget widget-id="2" class="one-by-two">Important</widget>
+          <widget widget-id="1" class="two-by-two"></widget>
+          <widget widget-id="2" class="one-by-two"></widget>
         </div>
         <div class="right-rail">
           <div class="right-rail__box">Right Rail Top</div>
@@ -48,11 +42,11 @@
 
       <div class="content-box">
         <div class="main-body">
-          <widget widget-id="3" class="one-by-two">Important</widget>
-          <widget widget-id="4" class="one-by-one">Stuff 1</widget>
-          <widget widget-id="5" class="one-by-one">Stuff 2</widget>
-          <widget widget-id="6" class="one-by-one">Stuff 3</widget>
-          <widget widget-id="7" class="one-by-one">Stuff 4</widget>
+          <widget widget-id="3" class="one-by-two"></widget>
+          <widget widget-id="4" class="one-by-one"></widget>
+          <widget widget-id="5" class="one-by-one"></widget>
+          <widget widget-id="6" class="one-by-one"></widget>
+          <widget widget-id="7" class="one-by-one"></widget>
         </div>
         <div class="right-rail">
           <div widget-id="13" class="right-rail__box">Right Rail Top</div>
@@ -62,11 +56,11 @@
 
     <div class="content-box">
       <div class="main-body">
-        <widget widget-id="8" class="two-by-one">Wide Thing</widget>
-        <widget widget-id="9" class="one-by-one">Box</widget>
-        <widget widget-id="10" class="one-by-one">Stuff 1</widget>
-        <widget widget-id="11" class="one-by-one">Stuff 2</widget>
-        <widget widget-id="12" class="one-by-one">Box</widget>
+        <widget widget-id="8" class="two-by-one"></widget>
+        <widget widget-id="9" class="one-by-one"></widget>
+        <widget widget-id="10" class="one-by-one"></widget>
+        <widget widget-id="11" class="one-by-one"></widget>
+        <widget widget-id="12" class="one-by-one"></widget>
       </div>
       <div class="right-rail">
         <div widget-id="15" class="right-rail__box">Right Rail Top</div>
