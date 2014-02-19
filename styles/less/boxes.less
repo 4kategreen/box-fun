@@ -69,14 +69,14 @@ body {
   }
 
   @media (min-width: @screen-md) {
-    .make-md-box(3.5,4);
+    .make-md-box(3.5,1);
   }
 
   &__box {
     .make-sm-box(6,1);
 
     @media (min-width: @screen-md) {
-      .make-md-box(12,4);
+      .make-md-box(12,1);
     }
   }
 }
@@ -103,7 +103,7 @@ body {
   .make-md-column(@w);
   color: black;
   &>div {
-    height: @h * 50px;
+    height: @h * 200px;
   }
 }
 
