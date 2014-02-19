@@ -109,6 +109,12 @@ body {
 }
 .full-two {
   .make-sm-box(12,8);
+
+  .widget__container {
+    @media (max-width: @screen-sm-max) {
+      height: auto !important;
+    }
+  }
 }
 
 .half-two {
@@ -117,6 +123,12 @@ body {
 
 .full-one {
   .make-sm-box(12,4);
+
+  .widget__container {
+    @media (max-width: @screen-sm-max) {
+      height: auto !important;
+    }
+  }
 }
 
 .half-one {
@@ -132,7 +144,7 @@ body {
   border: 1px solid #000;
 }
 
-.widget__container, .right-rail__box {
+.right-rail__box {
 
   @media (max-width: @screen-xs-max) {
     height: auto !important;

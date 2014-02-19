@@ -47,6 +47,14 @@ fieldset[disabled] .header__subscribe.active {
   color: #3e5266;
   background-color: #ffffff;
 }
+.navbar-nav:before,
+.navbar-nav:after {
+  content: " ";
+  display: table;
+}
+.navbar-nav:after {
+  clear: both;
+}
 /*
   Bootstrap style overrides. Recompiling bootstrap is not happening with these vars so they need
   to be done manually.
@@ -249,6 +257,11 @@ body {
 .full-two > div {
   height: 400px;
 }
+@media (max-width: 991px) {
+  .full-two .widget__container {
+    height: auto !important;
+  }
+}
 .half-two {
   position: relative;
   min-height: 1px;
@@ -280,6 +293,11 @@ body {
 }
 .full-one > div {
   height: 200px;
+}
+@media (max-width: 991px) {
+  .full-one .widget__container {
+    height: auto !important;
+  }
 }
 .half-one {
   position: relative;
@@ -318,7 +336,6 @@ body {
   border: 1px solid #000;
 }
 @media (max-width: 767px) {
-  .widget__container,
   .right-rail__box {
     height: auto !important;
   }
