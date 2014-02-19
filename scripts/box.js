@@ -1,24 +1,12 @@
 var boxes = angular.module('boxes', []);
 
 boxes.directive('widget', function() {
-  var findSpaceInRow = function findSpaceInRow(s,e,a) {
-    var top = e[0].offsetTop,
-        height = e[0].offsetHeight;
-
-    if (top === 0 && (height === 200 || height === 100)) {
-      e.addClass('top');
-    }
-    if (top === 200 && height === 100) {
-      e.addClass('top');
-    }
-
-    //console.log(a.widgetId);
-    //s.story = s.stories[storyId];
+  var loadContent = function loadContent(s,e,a) {
     s.story = s.$parent.stories[s.widgetId - 1];
   }
   return {
     restrict: 'E',
-    link: findSpaceInRow,
+    link: loadContent,
     templateUrl: 'views/widget.html',
     scope: {
       widgetId: '='
@@ -26,7 +14,7 @@ boxes.directive('widget', function() {
   }
 });
 
-boxes.directive('nav', function() {
+boxes.directive('headerNav', function() {
   return {
     restrict: 'E',
     templateUrl: 'views/nav.html',
