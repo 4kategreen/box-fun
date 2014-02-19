@@ -86,14 +86,14 @@ body {
 
   Where the content goes.
 
-  8 x 8: big box
-  4 x 8: tall
-  8 x 4: wide
-  4 x 4: regular box
-  4 x 2: small and wide
+  2 x 2: big box
+  1 x 2: tall
+  2 x 1: wide
+  1 x 1: regular box
+  1 x 0.5: small and wide
 */
-.make-sm-box(@w:4,@h:2) {
-  .make-sm-column(@w);
+.make-sm-box(@w:2,@h:1) {
+  .make-sm-column(@w*6);
   color: black;
   &>div {
     height: @h * 200px;
@@ -108,23 +108,23 @@ body {
 }
 
 .full-two {
-  .make-sm-box(12,2);
+  .make-sm-box(2,2);
 }
 
 .half-two {
-  .make-sm-box(6,2);
+  .make-sm-box(1,2);
 }
 
 .full-one {
-  .make-sm-box(12,1);
+  .make-sm-box(2,1);
 }
 
 .half-one {
-  .make-sm-box(6,1);
+  .make-sm-box(1,1);
 }
 
 .half-half {
-  .make-sm-box(6,0.5);
+  .make-sm-box(1,0.5);
 }
 
 

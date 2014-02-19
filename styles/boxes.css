@@ -158,7 +158,7 @@ body {
 @media (min-width: 768px) {
   .right-rail {
     float: left;
-    width: 100%;
+    width: 600%;
   }
 }
 .right-rail > div {
@@ -205,7 +205,7 @@ body {
 @media (min-width: 768px) {
   .right-rail__box {
     float: left;
-    width: 50%;
+    width: 300%;
   }
 }
 .right-rail__box > div {
@@ -234,11 +234,11 @@ body {
 
   Where the content goes.
 
-  8 x 8: big box
-  4 x 8: tall
-  8 x 4: wide
-  4 x 4: regular box
-  4 x 2: small and wide
+  2 x 2: big box
+  1 x 2: tall
+  2 x 1: wide
+  1 x 1: regular box
+  1 x 0.5: small and wide
 */
 .full-two {
   position: relative;
