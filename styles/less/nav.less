@@ -1,6 +1,10 @@
 .header {
   &__nav {
     .box-shadow(0 5px 10px @gray);
+
+    &.navbar {
+      //min-height: 100px;
+    }
   }
   &__nameplate {
     .h1;
@@ -10,4 +14,8 @@
   &__subscribe {
     .button-variant(#fff; @brand-info; @brand-info);
   }
+}
+
+.navbar-nav {
+  .clearfix();
 }
