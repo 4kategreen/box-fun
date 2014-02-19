@@ -45,8 +45,12 @@ body {
 */
 .main-body {
   .clearfix();
-  .make-md-column(9,0);
-  color: black;
+  .make-md-column(6,0);
+}
+
+.sub-body {
+  .clearfix();
+  .make-md-column(2.5,0);
 }
 /*
   .right-rail has more going on.
@@ -59,14 +63,14 @@ body {
 .right-rail {
   .make-sm-box(12,4);
   .clearfix();
-  color: black;
+  border: 1px solid #000;
 
   @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
     margin-top: @grid-gutter-width;
   }
 
   @media (min-width: @screen-md) {
-    .make-md-box(3,4);
+    .make-md-box(3.5,4);
   }
 
   &__box {
@@ -103,32 +107,32 @@ body {
     height: @h * 50px;
   }
 }
-.two-by-two {
-  .make-sm-box(8,8);
+.full-two {
+  .make-sm-box(12,8);
 }
 
-.one-by-two {
-  .make-sm-box(4,8);
+.half-two {
+  .make-sm-box(6,8);
 }
 
-.two-by-one {
-  .make-sm-box(8,4);
+.full-one {
+  .make-sm-box(12,4);
 }
 
-.one-by-one {
-  .make-sm-box(4,4);
+.half-one {
+  .make-sm-box(6,4);
 }
 
-.one-by-half {
-  .make-sm-box(4,2);
+.half-half {
+  .make-sm-box(6,2);
 }
 
 .widget__container {
   padding: @padding-small-vertical @padding-small-horizontal;
+  border: 1px solid #000;
 }
 
 .widget__container, .right-rail__box {
-  border: 1px solid #000;
 
   @media (max-width: @screen-xs-max) {
     height: auto !important;

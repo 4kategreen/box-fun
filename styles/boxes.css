@@ -97,7 +97,6 @@ body {
   min-height: 1px;
   padding-left: 0;
   padding-right: 0;
-  color: black;
 }
 .main-body:before,
 .main-body:after {
@@ -110,7 +109,27 @@ body {
 @media (min-width: 992px) {
   .main-body {
     float: left;
-    width: 75%;
+    width: 50%;
+  }
+}
+.sub-body {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.sub-body:before,
+.sub-body:after {
+  content: " ";
+  display: table;
+}
+.sub-body:after {
+  clear: both;
+}
+@media (min-width: 992px) {
+  .sub-body {
+    float: left;
+    width: 20.833333333333336%;
   }
 }
 /*
@@ -127,6 +146,7 @@ body {
   padding-left: 7.5px;
   padding-right: 7.5px;
   color: black;
+  border: 1px solid #000;
 }
 @media (min-width: 768px) {
   .right-rail {
@@ -165,7 +185,7 @@ body {
 @media (min-width: 992px) and (min-width: 992px) {
   .right-rail {
     float: left;
-    width: 25%;
+    width: 29.166666666666668%;
   }
 }
 .right-rail__box {
@@ -213,7 +233,7 @@ body {
   4 x 4: regular box
   4 x 2: small and wide
 */
-.two-by-two {
+.full-two {
   position: relative;
   min-height: 1px;
   padding-left: 7.5px;
@@ -221,15 +241,15 @@ body {
   color: black;
 }
 @media (min-width: 768px) {
-  .two-by-two {
+  .full-two {
     float: left;
-    width: 66.66666666666666%;
+    width: 100%;
   }
 }
-.two-by-two > div {
+.full-two > div {
   height: 400px;
 }
-.one-by-two {
+.half-two {
   position: relative;
   min-height: 1px;
   padding-left: 7.5px;
@@ -237,15 +257,15 @@ body {
   color: black;
 }
 @media (min-width: 768px) {
-  .one-by-two {
+  .half-two {
     float: left;
-    width: 33.33333333333333%;
+    width: 50%;
   }
 }
-.one-by-two > div {
+.half-two > div {
   height: 400px;
 }
-.two-by-one {
+.full-one {
   position: relative;
   min-height: 1px;
   padding-left: 7.5px;
@@ -253,15 +273,15 @@ body {
   color: black;
 }
 @media (min-width: 768px) {
-  .two-by-one {
+  .full-one {
     float: left;
-    width: 66.66666666666666%;
+    width: 100%;
   }
 }
-.two-by-one > div {
+.full-one > div {
   height: 200px;
 }
-.one-by-one {
+.half-one {
   position: relative;
   min-height: 1px;
   padding-left: 7.5px;
@@ -269,15 +289,15 @@ body {
   color: black;
 }
 @media (min-width: 768px) {
-  .one-by-one {
+  .half-one {
     float: left;
-    width: 33.33333333333333%;
+    width: 50%;
   }
 }
-.one-by-one > div {
+.half-one > div {
   height: 200px;
 }
-.one-by-half {
+.half-half {
   position: relative;
   min-height: 1px;
   padding-left: 7.5px;
@@ -285,19 +305,16 @@ body {
   color: black;
 }
 @media (min-width: 768px) {
-  .one-by-half {
+  .half-half {
     float: left;
-    width: 33.33333333333333%;
+    width: 50%;
   }
 }
-.one-by-half > div {
+.half-half > div {
   height: 100px;
 }
 .widget__container {
   padding: 5px 10px;
-}
-.widget__container,
-.right-rail__box {
   border: 1px solid #000;
 }
 @media (max-width: 767px) {
