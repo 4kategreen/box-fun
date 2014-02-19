@@ -33,7 +33,6 @@ body {
 .content-box {
   .make-row();
   display: inline-block;
-  margin: (@grid-gutter-width/2) 0;
 }
 
 /*
@@ -61,7 +60,7 @@ body {
   At sm, they are side-by-side.
 */
 .right-rail {
-  .make-sm-box(12,4);
+  .make-sm-box(12,1);
   .clearfix();
   border: 1px solid #000;
 
@@ -74,7 +73,7 @@ body {
   }
 
   &__box {
-    .make-sm-box(6,4);
+    .make-sm-box(6,1);
 
     @media (min-width: @screen-md) {
       .make-md-box(12,4);
@@ -97,7 +96,7 @@ body {
   .make-sm-column(@w);
   color: black;
   &>div {
-    height: @h * 50px;
+    height: @h * 200px;
   }
 }
 .make-md-box(@w:4,@h:2) {
@@ -107,44 +106,43 @@ body {
     height: @h * 50px;
   }
 }
-.full-two {
-  .make-sm-box(12,8);
 
-  .widget__container {
-    @media (max-width: @screen-sm-max) {
-      height: auto !important;
-    }
-  }
+.full-two {
+  .make-sm-box(12,2);
 }
 
 .half-two {
-  .make-sm-box(6,8);
+  .make-sm-box(6,2);
 }
 
 .full-one {
-  .make-sm-box(12,4);
-
-  .widget__container {
-    @media (max-width: @screen-sm-max) {
-      height: auto !important;
-    }
-  }
+  .make-sm-box(12,1);
 }
 
 .half-one {
-  .make-sm-box(6,4);
+  .make-sm-box(6,1);
 }
 
 .half-half {
-  .make-sm-box(6,2);
+  .make-sm-box(6,0.5);
 }
+
 
 .widget__container {
   padding: @padding-small-vertical @padding-small-horizontal;
   border: 1px solid #000;
+
+  .full-two>&, .full-one>& {
+    @media (max-width: @screen-sm-max) {
+      height: auto !important;
+    }
+  }
 }
 
-.right-rail__box {
+.widget__container, .right-rail__box {
+  @media (max-width: @screen-sm-max) {
+    margin-top: @grid-gutter-width;
+  }
 
   @media (max-width: @screen-xs-max) {
     height: auto !important;
@@ -152,6 +150,8 @@ body {
 }
 
 .top>.widget__container {
-  height: 185px;
-  margin-bottom: @grid-gutter-width;
+  @media (min-width: @screen-md) {
+    height: 185px;
+    margin-bottom: @grid-gutter-width;
+  }
 }

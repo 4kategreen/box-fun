@@ -91,7 +91,6 @@ body {
   margin-left: -7.5px;
   margin-right: -7.5px;
   display: inline-block;
-  margin: 7.5px 0;
 }
 /*
   Each .content-box has a .main-body and .right-rail by default.
@@ -257,11 +256,6 @@ body {
 .full-two > div {
   height: 400px;
 }
-@media (max-width: 991px) {
-  .full-two .widget__container {
-    height: auto !important;
-  }
-}
 .half-two {
   position: relative;
   min-height: 1px;
@@ -293,11 +287,6 @@ body {
 }
 .full-one > div {
   height: 200px;
-}
-@media (max-width: 991px) {
-  .full-one .widget__container {
-    height: auto !important;
-  }
 }
 .half-one {
   position: relative;
@@ -335,12 +324,27 @@ body {
   padding: 5px 10px;
   border: 1px solid #000;
 }
+@media (max-width: 991px) {
+  .full-two > .widget__container,
+  .full-one > .widget__container {
+    height: auto !important;
+  }
+}
+@media (max-width: 991px) {
+  .widget__container,
+  .right-rail__box {
+    margin-top: 15px;
+  }
+}
 @media (max-width: 767px) {
+  .widget__container,
   .right-rail__box {
     height: auto !important;
   }
 }
-.top > .widget__container {
-  height: 185px;
-  margin-bottom: 15px;
+@media (min-width: 992px) {
+  .top > .widget__container {
+    height: 185px;
+    margin-bottom: 15px;
+  }
 }
