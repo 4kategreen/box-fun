@@ -30,6 +30,12 @@
 
 .half-two {
   .make-sm-box(6,2);
+
+  @media (max-width: @screen-sm-max) {
+    &>div {
+      height: 415px;
+    }
+  }
 }
 
 .full-one {

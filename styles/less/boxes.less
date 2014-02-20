@@ -1,5 +1,6 @@
 @import 'variables.less';
 @import 'mixins.less';
+@import 'type.less';
 
 @import 'grid.less';
 @import 'nav.less';
@@ -15,14 +16,15 @@
   font-family: "Heuristica";
   src: url("http://chronicle.com/themes/che/fonts/heuristica-regular-webfont.woff");
 }
+@font-family-serif: Heuristica, serif;
 
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
-  font-family: Heuristica, serif;
+  font-family: @font-family-serif;
 }
 
 .main-content-box {
-  margin-top: 70px;
+  margin-top: 100px;
 }
 /*
   Each row is .content-box
