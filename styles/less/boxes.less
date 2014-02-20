@@ -19,10 +19,6 @@ h1,h2,h3,h4,h5,h6,
   font-family: Heuristica, serif;
 }
 
-body {
-  background-color: @gray-lighter;
-}
-
 .main-content-box {
   background-color: #fff;
   margin-top: 70px;
@@ -62,7 +58,7 @@ body {
 .right-rail {
   .make-sm-box(12,1);
   .clearfix();
-  border: 1px solid #000;
+  background-color: @gray-lighter;
 
   @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
     margin-top: @grid-gutter-width;
@@ -155,7 +151,7 @@ widget {
 
 .top>.widget__container {
   @media (min-width: @screen-md) {
-    height: 185px;
-    margin-bottom: @grid-gutter-width;
+    height: 192.5px;
+    margin-bottom: (@grid-gutter-width / 2);
   }
 }
