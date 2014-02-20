@@ -1,5 +1,7 @@
 @import 'variables.less';
 @import 'mixins.less';
+
+@import 'grid.less';
 @import 'nav.less';
 
 /*
@@ -20,7 +22,6 @@ h1,h2,h3,h4,h5,h6,
 }
 
 .main-content-box {
-  background-color: #fff;
   margin-top: 70px;
 }
 /*
@@ -29,14 +30,13 @@ h1,h2,h3,h4,h5,h6,
 .content-box {
   .make-row();
   display: inline-block;
+  margin-top: (@grid-gutter-width / 2)
 }
 
 /*
-  Each .content-box has a .main-body and .right-rail by default.
+  Each .content-box has a .main-body, a .sub-body and .right-rail by default.
 
-  These are both set up to be to the left and right really shouldn't exist without each
-  other, since it's a 9-3 layout. Both get a clearfix to handle any silliness when they
-  get down to the smallest sizes.
+  These are set up to be to the left, middle and right. The layout is 6-2.5-3.5. You can see the 3.5 in a media query in the right rail.
 */
 .main-body {
   .clearfix();
@@ -45,7 +45,7 @@ h1,h2,h3,h4,h5,h6,
 
 .sub-body {
   .clearfix();
-  .make-md-column(2.5,0);
+  .make-md-column(2.5, (@grid-gutter-width / 4));
 }
 /*
   .right-rail has more going on.
@@ -62,7 +62,6 @@ h1,h2,h3,h4,h5,h6,
 
   @media (max-width: @screen-sm-max) {
     margin: @grid-gutter-width (@grid-gutter-width / 2) 0 (@grid-gutter-width / 2);
-
   }
 
   @media (min-width: @screen-md) {
@@ -81,53 +80,6 @@ h1,h2,h3,h4,h5,h6,
 widget {
   display: block;
 }
-
-/*
-  Widget Boxes
-
-  Where the content goes.
-
-  2 x 2: big box
-  1 x 2: tall
-  2 x 1: wide
-  1 x 1: regular box
-  1 x 0.5: small and wide
-*/
-.make-sm-box(@w:6,@h:1) {
-  .make-sm-column(@w);
-  color: black;
-  &>div {
-    height: @h * 200px;
-  }
-}
-.make-md-box(@w:6,@h:1) {
-  .make-md-column(@w);
-  color: black;
-  &>div {
-    height: @h * 200px;
-  }
-}
-
-.full-two {
-  .make-sm-box(12,2);
-}
-
-.half-two {
-  .make-sm-box(6,2);
-}
-
-.full-one {
-  .make-sm-box(12,1);
-}
-
-.half-one {
-  .make-sm-box(6,1);
-}
-
-.half-half {
-  .make-sm-box(6,0.5);
-}
-
 
 .widget__container {
   padding: @padding-small-vertical @padding-small-horizontal;

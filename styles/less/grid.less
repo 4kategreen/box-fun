@@ -1,0 +1,45 @@
+/*
+  Widget Boxes
+
+  Where the content goes.
+
+  2 x 2: big box
+  1 x 2: tall
+  2 x 1: wide
+  1 x 1: regular box
+  1 x 0.5: small and wide
+*/
+.make-sm-box(@w:6,@h:1) {
+  .make-sm-column(@w);
+  color: black;
+  &>div {
+    height: @h * 200px;
+  }
+}
+.make-md-box(@w:6,@h:1) {
+  .make-md-column(@w);
+  color: black;
+  &>div {
+    height: @h * 200px;
+  }
+}
+
+.full-two {
+  .make-sm-box(12,2);
+}
+
+.half-two {
+  .make-sm-box(6,2);
+}
+
+.full-one {
+  .make-sm-box(12,1);
+}
+
+.half-one {
+  .make-sm-box(6,1);
+}
+
+.half-half {
+  .make-sm-box(6,0.5);
+}

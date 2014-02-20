@@ -1,3 +1,94 @@
+/*
+  Widget Boxes
+
+  Where the content goes.
+
+  2 x 2: big box
+  1 x 2: tall
+  2 x 1: wide
+  1 x 1: regular box
+  1 x 0.5: small and wide
+*/
+.full-two {
+  position: relative;
+  min-height: 1px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  color: black;
+}
+@media (min-width: 768px) {
+  .full-two {
+    float: left;
+    width: 100%;
+  }
+}
+.full-two > div {
+  height: 400px;
+}
+.half-two {
+  position: relative;
+  min-height: 1px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  color: black;
+}
+@media (min-width: 768px) {
+  .half-two {
+    float: left;
+    width: 50%;
+  }
+}
+.half-two > div {
+  height: 400px;
+}
+.full-one {
+  position: relative;
+  min-height: 1px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  color: black;
+}
+@media (min-width: 768px) {
+  .full-one {
+    float: left;
+    width: 100%;
+  }
+}
+.full-one > div {
+  height: 200px;
+}
+.half-one {
+  position: relative;
+  min-height: 1px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  color: black;
+}
+@media (min-width: 768px) {
+  .half-one {
+    float: left;
+    width: 50%;
+  }
+}
+.half-one > div {
+  height: 200px;
+}
+.half-half {
+  position: relative;
+  min-height: 1px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  color: black;
+}
+@media (min-width: 768px) {
+  .half-half {
+    float: left;
+    width: 50%;
+  }
+}
+.half-half > div {
+  height: 100px;
+}
 .header__nav {
   -webkit-box-shadow: 0 5px 10px #555555;
   box-shadow: 0 5px 10px #555555;
@@ -45,7 +136,7 @@ fieldset[disabled] .header__subscribe.active {
 }
 .header__subscribe .badge {
   color: #3e5266;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .navbar-nav:before,
 .navbar-nav:after {
@@ -78,7 +169,6 @@ h6,
   font-family: Heuristica, serif;
 }
 .main-content-box {
-  background-color: #fff;
   margin-top: 70px;
 }
 /*
@@ -88,21 +178,12 @@ h6,
   margin-left: -7.5px;
   margin-right: -7.5px;
   display: inline-block;
-}
-.content-box:before,
-.content-box:after {
-  content: " ";
-  display: table;
-}
-.content-box:after {
-  clear: both;
+  margin-top: 7.5px;
 }
 /*
-  Each .content-box has a .main-body and .right-rail by default.
+  Each .content-box has a .main-body, a .sub-body and .right-rail by default.
 
-  These are both set up to be to the left and right really shouldn't exist without each
-  other, since it's a 9-3 layout. Both get a clearfix to handle any silliness when they
-  get down to the smallest sizes.
+  These are set up to be to the left, middle and right. The layout is 6-2.5-3.5. You can see the 3.5 in a media query in the right rail.
 */
 .main-body {
   position: relative;
@@ -127,8 +208,8 @@ h6,
 .sub-body {
   position: relative;
   min-height: 1px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1.875px;
+  padding-right: 1.875px;
 }
 .sub-body:before,
 .sub-body:after {
@@ -232,97 +313,6 @@ h6,
 }
 widget {
   display: block;
-}
-/*
-  Widget Boxes
-
-  Where the content goes.
-
-  2 x 2: big box
-  1 x 2: tall
-  2 x 1: wide
-  1 x 1: regular box
-  1 x 0.5: small and wide
-*/
-.full-two {
-  position: relative;
-  min-height: 1px;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
-  color: black;
-}
-@media (min-width: 768px) {
-  .full-two {
-    float: left;
-    width: 100%;
-  }
-}
-.full-two > div {
-  height: 400px;
-}
-.half-two {
-  position: relative;
-  min-height: 1px;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
-  color: black;
-}
-@media (min-width: 768px) {
-  .half-two {
-    float: left;
-    width: 50%;
-  }
-}
-.half-two > div {
-  height: 400px;
-}
-.full-one {
-  position: relative;
-  min-height: 1px;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
-  color: black;
-}
-@media (min-width: 768px) {
-  .full-one {
-    float: left;
-    width: 100%;
-  }
-}
-.full-one > div {
-  height: 200px;
-}
-.half-one {
-  position: relative;
-  min-height: 1px;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
-  color: black;
-}
-@media (min-width: 768px) {
-  .half-one {
-    float: left;
-    width: 50%;
-  }
-}
-.half-one > div {
-  height: 200px;
-}
-.half-half {
-  position: relative;
-  min-height: 1px;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
-  color: black;
-}
-@media (min-width: 768px) {
-  .half-half {
-    float: left;
-    width: 50%;
-  }
-}
-.half-half > div {
-  height: 100px;
 }
 .widget__container {
   padding: 5px 10px;
