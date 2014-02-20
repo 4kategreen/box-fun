@@ -60,7 +60,7 @@ body {
   At sm, they are side-by-side.
 */
 .right-rail {
-  .make-sm-box(12,1);
+  .make-sm-box(2,1);
   .clearfix();
   border: 1px solid #000;
 
@@ -69,16 +69,20 @@ body {
   }
 
   @media (min-width: @screen-md) {
-    .make-md-box(3.5,1);
+    .make-md-column(3.5);
   }
 
   &__box {
-    .make-sm-box(6,1);
+    .make-sm-box(1,1);
 
     @media (min-width: @screen-md) {
-      .make-md-box(12,1);
+      .make-md-box(2,1);
     }
   }
+}
+
+widget {
+  display: block;
 }
 
 /*
@@ -99,8 +103,8 @@ body {
     height: @h * 200px;
   }
 }
-.make-md-box(@w:4,@h:2) {
-  .make-md-column(@w);
+.make-md-box(@w:2,@h:1) {
+  .make-md-column(@w*6);
   color: black;
   &>div {
     height: @h * 200px;
