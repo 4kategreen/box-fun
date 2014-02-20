@@ -60,8 +60,9 @@ h1,h2,h3,h4,h5,h6,
   .clearfix();
   background-color: @gray-lighter;
 
-  @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
-    margin-top: @grid-gutter-width;
+  @media (max-width: @screen-sm-max) {
+    margin: @grid-gutter-width (@grid-gutter-width / 2) 0 (@grid-gutter-width / 2);
+
   }
 
   @media (min-width: @screen-md) {

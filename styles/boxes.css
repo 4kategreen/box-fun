@@ -177,9 +177,9 @@ h6,
 .right-rail:after {
   clear: both;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .right-rail {
-    margin-top: 15px;
+    margin: 15px 7.5px 0 7.5px;
   }
 }
 @media (min-width: 992px) {
