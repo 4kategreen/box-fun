@@ -60,7 +60,7 @@ body {
   At sm, they are side-by-side.
 */
 .right-rail {
-  .make-sm-box(2,1);
+  .make-sm-box(12,1);
   .clearfix();
   border: 1px solid #000;
 
@@ -73,10 +73,10 @@ body {
   }
 
   &__box {
-    .make-sm-box(1,1);
+    .make-sm-box(6,1);
 
     @media (min-width: @screen-md) {
-      .make-md-box(2,1);
+      .make-md-box(12,1);
     }
   }
 }
@@ -96,15 +96,15 @@ widget {
   1 x 1: regular box
   1 x 0.5: small and wide
 */
-.make-sm-box(@w:2,@h:1) {
-  .make-sm-column(@w*6);
+.make-sm-box(@w:6,@h:1) {
+  .make-sm-column(@w);
   color: black;
   &>div {
     height: @h * 200px;
   }
 }
-.make-md-box(@w:2,@h:1) {
-  .make-md-column(@w*6);
+.make-md-box(@w:6,@h:1) {
+  .make-md-column(@w);
   color: black;
   &>div {
     height: @h * 200px;
@@ -112,23 +112,23 @@ widget {
 }
 
 .full-two {
-  .make-sm-box(2,2);
+  .make-sm-box(12,2);
 }
 
 .half-two {
-  .make-sm-box(1,2);
+  .make-sm-box(6,2);
 }
 
 .full-one {
-  .make-sm-box(2,1);
+  .make-sm-box(12,1);
 }
 
 .half-one {
-  .make-sm-box(1,1);
+  .make-sm-box(6,1);
 }
 
 .half-half {
-  .make-sm-box(1,0.5);
+  .make-sm-box(6,0.5);
 }
 
 
