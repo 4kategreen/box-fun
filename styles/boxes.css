@@ -497,6 +497,70 @@ fieldset[disabled] .header__subscribe.active {
     width: 100%;
   }
 }
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-80px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slideDown {
+  0% {
+    -moz-transform: translateY(-80px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes slideDown {
+  0% {
+    -o-transform: translateY(-80px);
+  }
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-80px);
+  }
+}
+@-moz-keyframes slideUp {
+  0% {
+    -moz-transform: translateY(0);
+  }
+  100% {
+    -moz-transform: translateY(-80px);
+  }
+}
+@-o-keyframes slideUp {
+  0% {
+    -o-transform: translateY(0);
+  }
+  100% {
+    -o-transform: translateY(-80px);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-80px);
+  }
+}
 .headroom--pinned {
   -webkit-animation-name: 'slideDown';
   animation-name: 'slideDown';
