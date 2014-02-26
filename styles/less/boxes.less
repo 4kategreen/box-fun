@@ -59,11 +59,9 @@ h1,h2,h3,h4,h5,h6,
 */
 .right-rail {
   .make-sm-box(12,1);
-  .clearfix();
-  background-color: @gray-lighter;
 
   @media (max-width: @screen-sm-max) {
-    margin: @grid-gutter-width (@grid-gutter-width / 2) 0 (@grid-gutter-width / 2);
+    margin-top: @grid-gutter-width;
   }
 
   @media (min-width: @screen-md) {
@@ -72,6 +70,7 @@ h1,h2,h3,h4,h5,h6,
 
   &__box {
     .make-sm-box(6,1);
+    background-color: @gray-lighter;
 
     @media (min-width: @screen-md) {
       .make-md-box(12,1);

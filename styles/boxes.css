@@ -670,7 +670,6 @@ h6,
   padding-left: 7.5px;
   padding-right: 7.5px;
   color: black;
-  background-color: #eeeeee;
 }
 @media (min-width: 768px) {
   .right-rail {
@@ -681,17 +680,9 @@ h6,
 .right-rail > div {
   height: 200px;
 }
-.right-rail:before,
-.right-rail:after {
-  content: " ";
-  display: table;
-}
-.right-rail:after {
-  clear: both;
-}
 @media (max-width: 991px) {
   .right-rail {
-    margin: 15px 7.5px 0 7.5px;
+    margin-top: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -714,6 +705,7 @@ h6,
   padding-left: 7.5px;
   padding-right: 7.5px;
   color: black;
+  background-color: #eeeeee;
 }
 @media (min-width: 768px) {
   .right-rail__box {
