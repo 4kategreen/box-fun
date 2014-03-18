@@ -15,6 +15,42 @@ module.exports = function(grunt) {
       }
     },
 
+    jasmine: {
+      all: {
+        src: 'scripts/baseTests.js', // this may need to dig into the site-specific stuff
+        options: {
+          specs: 'scripts/tests/baseTests.js'
+        }
+      },
+      istanbul: {
+        src: '<%= jasmine.all.src %>',
+        options: {
+          specs: '<%= jasmine.all.options.specs %>',
+          template: require('grunt-template-jasmine-istanbul'),
+          templateOptions: {
+            coverage: 'scripts/tests/coverage/json/coverage.json',
+            report: [
+              { type: 'html', options: { dir: 'scripts/tests/coverage/html' } },
+              { type: 'text-summary' }
+            ]
+          }
+        }
+      },
+    },
+
+    coverage: {
+      options: {
+        thresholds: {
+          'statements': 90,
+          'branches': 90,
+          'lines': 90,
+          'functions': 90
+        },
+        dir: 'json',
+        root: 'scripts/tests/coverage'
+      }
+    },
+
     watch: {
       options: {
         interrupt: true
@@ -25,24 +61,20 @@ module.exports = function(grunt) {
       },
       tests: {
         files: 'scripts/**/*.js',
-        tasks: ['jasmine']
+        tasks: ['jasmine','cover']
       }
-    },
-
-    jasmine: {
-      src: 'scripts/baseTests.js', // this may need to dig into the site-specific stuff
-      options: {
-        specs: 'scripts/tests/baseTests.js'
-      }
-    },
+    }
   });
 
   // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-istanbul-coverage');
 
   // Default task(s).
-  grunt.registerTask('default', ['less','jasmine']);
-
+  grunt.registerTask('default', ['less','test','coverage']);
+  grunt.registerTask('test', ['jasmine:all']);
+  grunt.registerTask('cover', ['jasmine:istanbul','coverage']);
 };
