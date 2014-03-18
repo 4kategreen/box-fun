@@ -12,11 +12,14 @@ Calculator.prototype.add = function add(x,y) {
 
 Calculator.prototype.subtract = function subtract() {
   var args = Array.prototype.slice.call(arguments),
-      total;
+      total,
+      error = false,
+      errorMessage;
 
   args.forEach(function(element, index) {
     if (typeof(element) !== 'number') {
-      return 'ERROR: Argument '+(index+1)+' is not a number';
+      error = true;
+      errorMessage = 'ERROR: Argument '+(index+1)+' is not a number';
     } else {
       if (index === 0) {
         total = element;
@@ -26,5 +29,9 @@ Calculator.prototype.subtract = function subtract() {
     }
   });
 
-  return total;
+  if (error) {
+    return errorMessage;
+  } else {
+    return total;
+  }
 };
