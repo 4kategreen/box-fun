@@ -15,6 +15,25 @@ module.exports = function(grunt) {
       }
     },
 
+    jshint: {
+      options: {
+        asi: true,
+        eqeqeq: true,
+        forin: true,
+        latedef: true,
+        globals: {
+          jQuery: true
+        },
+        expr: true,
+        evil: true
+      },
+      with_overrides: {
+        files: {
+          src: ['scripts/*.js','Gruntfile.js']
+        }
+      }
+    },
+
     jasmine: {
       all: {
         src: 'scripts/baseTests.js', // this may need to dig into the site-specific stuff
@@ -69,12 +88,13 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-istanbul-coverage');
 
   // Default task(s).
   grunt.registerTask('default', ['less','test','coverage']);
-  grunt.registerTask('test', ['jasmine:all']);
+  grunt.registerTask('test', ['jshint','jasmine:all']);
   grunt.registerTask('cover', ['jasmine:istanbul','coverage']);
 };
